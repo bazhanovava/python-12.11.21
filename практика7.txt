@@ -1,0 +1,55 @@
+задача 1
+def print_till_zero(n):
+    if n==0:
+        return
+    print(n)
+    n=n-1
+    print_till_zero(n)
+print_till_zero(7)
+
+задача 2
+def palindrome(s):
+    if len(s) < 1:
+        return True
+    else:
+        if s[0] == s[-1]:
+            return palindrome(s[1:-1])
+        else:
+            return False
+a = str(input("Введите строку:"))
+if (palindrome(a) == True):
+    print("палиндром!")
+else:
+    print("не палиндром!")
+
+задача 3
+def power(a, n):
+    if (n == 1):
+        return (a)
+    if (n != 1):
+        return (a * power(a, n - 1))
+a = int(input("Введите число: "))
+n = int(input("Введите его степень: "))
+print("Результат возведения в степень равен:", power(a, n))
+
+задача 4
+def max_in(list):
+    if list == []:
+        m = "spisok: ..."    
+        return m
+
+    max = list[0]
+    for item in list[1:]:
+        if item > max:
+            max = item
+    return max
+
+a = [8,90,-1]
+print(max(a))
+
+задача 5
+def fib(n):
+    if n in (1, 2):
+        return 1
+    return fib(n - 1) + fib(n - 2)
+ print(fib(6))
